@@ -46,7 +46,8 @@ void draw() {
    dibujarRamas(longitud, weight);
    popMatrix();
    if (show){
-     text("Ocultar: Z", 0, 11*height/12-30);
+     text("Ocultar: Z", 0, 11*height/12-60);
+     text("Guardar: X", 0, 11*height/12-30);
      text("Anchura(Q,A) = "+weight,0,11*height/12);
      text("Long(W,S) = "+longitud,150,11*height/12);
      text("Angulo(E,D) = "+deg/PI+" PI",300,11*height/12);
@@ -105,5 +106,8 @@ void keyPressed() {
   }
   else if (key == 'Z') {
     show = !show;
+  }
+  else if (key == 'X') {
+    save("arbol.jpg");
   }
 }
